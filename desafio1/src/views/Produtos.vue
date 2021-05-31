@@ -32,7 +32,8 @@ export default {
           this.$router.push("/");
       }
       this.produtos.map( item =>{
-          if(item.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(this.pesquisa)){
+          if(item.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+          .includes(this.pesquisa.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""))){
               this.produtosPesquisados.push( item)
           }
       })
