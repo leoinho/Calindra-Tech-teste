@@ -1,0 +1,38 @@
+@import "../../assets/sass/_cores.scss";
+@import "../../assets/sass/_variaveis.scss";
+
+.banner{
+    height: 914px;
+    background: $cor-fundo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: $pequeno) {
+        flex-direction: column;
+        height: 511px;
+      }
+    h1{
+        font-family: $font;
+        font-size: 82px;
+        line-height: 96px;
+        margin-right: 27px;
+        color: $texto-banner;
+        @media screen and (max-width: $medio) {
+            font-size: 53px;
+            line-height: 62px;
+            margin-top: -50px;
+          }
+    }
+    .imagem{
+
+        img{
+            width: 682px;
+            @media screen and (max-width: $medio) {
+                width: 100%;
+              }
+            @media screen and (max-width: $pequeno) {
+                width: 313px;
+              }
+        }
+    }
+}

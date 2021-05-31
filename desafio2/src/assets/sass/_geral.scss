@@ -1,0 +1,36 @@
+@import "../../assets/sass/_cores.scss";
+@import "../../assets/sass/_variaveis.scss";
+
+.container{
+    max-width: $max_width;
+    margin: auto;
+
+    .mobile{
+        display: none !important;
+        @media screen and (max-width: $pequeno) {
+            display: flex !important;
+        }
+    }
+    .desktop{
+        display: flex;
+        @media screen and (max-width: $pequeno) {
+            display: none;
+        }
+    }
+    .flex{
+        display: flex;
+    }
+    
+    .menu-mobile{
+        position: absolute;
+        left: 22px;
+        top: 14px;
+        transform: rotate(0deg);
+        transition: transform 1s;
+       
+        
+    }
+    .menu-mobile-ativo{
+        transform: rotate(90deg) !important;
+    }
+}

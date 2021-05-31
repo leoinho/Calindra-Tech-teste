@@ -1,0 +1,60 @@
+@import "../../assets/sass/_cores.scss";
+@import "../../assets/sass/_variaveis.scss";
+
+.descricao{
+    height: 914px;
+    background: $cor-fundo-descri;
+    background-image: url(../../assets/img/fita-descricao.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 72%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    @media screen and (max-width: $pequeno) {
+        flex-direction: column;
+        height: 511px;
+        align-items: center;
+        background-image: none;
+      }
+
+    .texto{
+        margin: 0 0 45px 110px;
+        @media screen and (max-width: $pequeno) {
+            margin: 0;
+            padding-top: 30px;
+          }
+          h1{
+              font-family: $font;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 69px;
+              line-height: 81px;
+              color: $cor-branco;
+              @media screen and (max-width: $pequeno) {
+                  font-size: 41px;
+                  line-height: 48px;
+                  margin: 15px 0;
+                }
+          }
+          p{
+              font-family: $font;
+              font-style: normal;
+              font-weight: 300;
+              font-size: 48px;
+              line-height: 56px;
+              color: $cor-branco;
+              @media screen and (max-width: $pequeno) {
+                  font-size: 26px;
+                  line-height: 31px;
+                  margin: 0;
+                }
+          }
+    }
+    .imagem{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 15px;
+    }
+}

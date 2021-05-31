@@ -1,0 +1,58 @@
+@import "../../assets/sass/_cores.scss";
+@import "../../assets/sass/_variaveis.scss";
+
+.footer{
+    background: $cor-fundo;
+    height: 226px;
+    display: flex;
+    @media screen and (max-width: $pequeno) {
+        flex-direction: column;
+        height: 334px;
+      }
+    .bloco{
+        width: 171px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 30px 120px;
+        @media screen and (max-width: $pequeno) {
+            padding: 0;
+            margin: auto;
+            align-items: center;
+          }
+    }
+    h1{
+        font-family: $font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 27.2px;
+        line-height: 32px;
+        color: $texto-banner;
+    }
+    .icones-redes-sociais{
+        display: flex;
+        width: 170px;
+        justify-content: space-between;
+
+        :nth-child(n){
+            cursor: pointer;
+        }
+    }
+    .contatos{
+        @media screen and (max-width: $pequeno) {
+            width: 100%;
+            text-align: center;
+          }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li{
+                font-family: $font;
+                font-size: 16px;
+                line-height: 19px;
+                color: $texto-banner;
+            }
+        }
+    }
+}

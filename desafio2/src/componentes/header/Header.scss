@@ -1,0 +1,100 @@
+@import "../../assets/sass/_cores.scss";
+@import "../../assets/sass/_variaveis.scss";
+
+.header{
+    position: relative;
+    display: flex;
+    height: 110px;
+    align-items: center;
+    padding: 0 50px;
+    justify-content: space-between;
+    @media screen and (max-width: $pequeno) {
+      padding: 0;
+      justify-content: center;
+      height: 57px
+    }
+    .titulo{
+        font-family: $font;
+        font-weight: bold;
+        font-size: 41.2px;
+        line-height: 48px;
+        margin: -5px 0 0px 24px;
+        color: $texto-header;
+        @media screen and (max-width: $pequeno) {
+            display: none;
+        }
+    }
+    .sub-titulo{
+        font-family: $font;
+        font-weight: 300;
+        font-size: 16.2px;
+        line-height: 19px;
+        letter-spacing: 5.4px;
+        margin: 0 0 0px 25px;
+        color: $texto-header;
+        @media screen and (max-width: $pequeno) {
+          display: none;
+      }
+    }
+    .links{
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+        font-family: $font;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 5.4px;
+        color: $texto-header;
+        @media screen and (max-width: $medio) {
+            width: 420px;
+        }
+        @media screen and (max-width: $pequeno) {
+            display: none;
+        }
+        a{
+            cursor: pointer;
+        }
+        a:link {
+            color: $texto-header;
+          }
+          a:visited {
+            color: $texto-header;
+          }
+          a:hover {
+            color: $texto-header;
+          }
+          a:active {
+            color: $texto-header;
+          }
+    }
+    .menu-mobile-itens{
+      top: 1;
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      background: $cor-fundo-descri;
+      
+  }
+    #menu{
+      display: flex;
+      flex-direction: column;
+      top: 58px;
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      height: 0;
+      background: $cor-fundo-descri;
+      width: 100%;
+      transition: all 1s;
+      a{
+        margin: 20px auto;
+        color: $cor-branco;
+      }
+  }
+  .menu-mobile-itens-ativo{
+      z-index: 1 !important;
+      opacity: 1 !important;
+      height: 100vh !important;
+  }
+}
